@@ -1,0 +1,86 @@
+// Course 12: Forgiving Yourself (Rebuild Path Only)
+export const course12Content = {
+  1: {
+    title: "What Forgiveness Actually Means",
+    content: [
+      "Forgiveness is one of the most misunderstood concepts in the healing journey. And because it's misunderstood, it becomes a barrier instead of a doorway. So before anything else let's get clear on what forgiveness actually is and what it isn't.",
+      "Forgiveness is not saying what happened was okay. It isn't minimizing the abuse, excusing the abuser, or pretending the damage wasn't real. It isn't reconciliation. It isn't trust restored. It isn't a relationship repaired. It isn't forgetting. And it absolutely isn't something you do for the person who hurt you.",
+      "Forgiveness is something you do for yourself.",
+      "At its core forgiveness is the decision to stop letting what happened to you continue to cost you. It's the choice to release the grip that pain, anger, shame, and regret have on your present life so that you can move forward without carrying the full weight of the past everywhere you go. It doesn't mean the past didn't happen. It means you've decided it no longer gets to run your future.",
+      "There are two kinds of forgiveness that matter in this season of rebuilding. Forgiving the person who hurt you and forgiving yourself. This course is about the second one because it's the one that gets talked about least and matters most to your healing.",
+      "Self forgiveness is the decision to release yourself from the punishment of your own judgment. It's choosing to stop prosecuting yourself for the choices you made under impossible conditions. It's acknowledging that you were doing the best you could with what you had in a situation you didn't choose and extending yourself the same grace you'd extend to someone you love who had been through the same thing.",
+      "That's not letting yourself off the hook. That's being honest about what you were up against.",
+      "Forgiveness isn't a feeling that arrives one day and stays. It's a decision you make repeatedly until it becomes a way of living. Some days it'll feel natural. Other days you'll have to choose it deliberately in the middle of a shame spiral that's trying to pull you back under.",
+      "Choose it anyway. You deserve to be free from the weight of your own judgment as much as you deserve to be free from everything else abuse put on you.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  2: {
+    title: "The Things You've Been Blaming Yourself For",
+    content: [
+      "There's a list you carry. You may not have written it down but you know it by heart. Every decision you made during the abuse that you wish you'd made differently. Every moment you stayed when part of you wanted to leave. Every time you went back. Every argument you didn't win. Every time you couldn't protect your children from what they witnessed. Every time you believed the promises. Every time you trusted someone who used that trust against you.",
+      "That list has been running in the background of your life for a long time. And today we're going to look at it honestly.",
+      "You blame yourself for staying. The truth is you stayed for reasons that made sense given what you knew, what you had, and what you were afraid of at the time. You stayed because you loved someone. Because you had children. Because you had nowhere to go. Because leaving is statistically the most dangerous time in an abusive relationship. Because you kept hoping the person you fell in love with would come back. Because you were exhausted and the fight to leave took more than you had at that moment. None of those reasons are weakness. They're the reality of what you were navigating.",
+      "You blame yourself for going back. You went back because trauma bonding is real and powerful. Because the person who hurt you was also the person your nervous system had attached to. Because the promises felt real in the moment. Because love doesn't turn off cleanly even when it should. Going back wasn't a failure of intelligence or strength. It was a human response to an inhuman situation.",
+      "You blame yourself for what your children witnessed. This one sits heaviest for most parents. And it deserves to be addressed directly. Your children witnessed abuse because someone chose to be abusive in your home. That choice belonged to your abuser. Not to you. You didn't create the environment. You survived it while trying to protect everyone in it including yourself. Your children need you healed and present now. That's what you can give them.",
+      "You blame yourself for not seeing it sooner. Abuse rarely announces itself. It arrives slowly, disguised as intensity, devotion, and love. By the time the mask comes off you're already attached, already isolated, and already doubting your own perception. Not seeing it sooner doesn't mean you were naive. It means you were human and your abuser was practiced.",
+      "Look at that list one more time. Every item on it was a response to something that was done to you. Not a reflection of who you are.",
+      "It's time to put the list down.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  3: {
+    title: "Survival Doesn't Always Look Pretty",
+    content: [
+      "Nobody talks about this part. The part where survival required you to do things you aren't proud of. Where the version of yourself that showed up during the abuse wasn't the version you'd choose under different circumstances. Where fear, desperation, and exhaustion pushed you into moments that still make you cringe when you think about them.",
+      "This lesson is for those moments.",
+      "Maybe you said things during arguments that crossed lines you wish you hadn't crossed. When you're in a constant state of fear and hypervigilance, when you've been pushed past your limit for the hundredth time, when you're fighting for your sense of self in a situation designed to erase it, you don't always respond with grace. You respond with what you have. And sometimes what you have in that moment isn't pretty.",
+      "Maybe you made decisions that compromised your values. Desperation has a way of narrowing your options until choices that would have been unthinkable under normal circumstances start to feel like the only way through. Financial desperation. Emotional desperation. The desperation of trying to hold your family together under impossible conditions. The decisions you made from that place deserve to be understood in context, not judged in hindsight from the safety of distance.",
+      "Maybe you weren't the parent you wanted to be during that season. Surviving abuse while raising children is one of the hardest things a human being can do. There were days you didn't have enough left to give them what they needed. Days when your own survival took everything you had. That doesn't make you a bad parent. It makes you someone who was drowning and still trying to keep everyone else afloat.",
+      "Maybe you stayed silent when speaking up might have helped. Silence during abuse isn't cowardice. It's calculation. You knew better than anyone what speaking up would cost you. Choosing silence to stay safer wasn't a moral failing. It was navigation.",
+      "Here's what all of these moments have in common. They happened inside a situation you didn't choose, under conditions designed to bring out the worst in everyone involved, while you were doing your best to survive something that had no good options.",
+      "Survival doesn't always look pretty. But you survived. And that matters more than how it looked.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  4: {
+    title: "Releasing the Weight of What You Wish You'd Done Differently",
+    content: [
+      "Hindsight is one of the cruelest gifts that comes with healing. The further you get from the abuse the clearer everything looks. And with that clarity comes a version of yourself standing in the present looking back at the past with information you didn't have then, asking why didn't I see that? Why didn't I leave sooner? Why did I say that? Why did I stay quiet? Why did I go back?",
+      "That version of you in the present knows things the version of you in the past couldn't have known. And judging past decisions with present knowledge isn't fair. It isn't honest. And it isn't helping you heal.",
+      "Here's the truth about the things you wish you'd done differently.",
+      "You made every decision with the information, resources, and emotional capacity you had at that exact moment. Not the information you have now. Not the resources you've built since. Not the clarity that distance and healing have given you. You made the best decision available to you with what you had in that moment. That's all any human being can ever do.",
+      "Releasing the weight of those decisions doesn't mean pretending they didn't happen. It means holding them with honesty and compassion at the same time. Yes that happened. Yes it was hard. Yes it didn't go the way I would have wanted. And I was doing the best I could under conditions that would have broken most people.",
+      "Both things are true at the same time.",
+      "There's a practice that can help with this. When a memory surfaces that carries shame or regret, instead of trying to push it away or getting pulled into the spiral of self judgment, try sitting with it differently. Ask yourself what did I know at that moment? What was I afraid of? What did I have available to me? What was I trying to protect? When you answer those questions honestly you'll almost always find that the decision you made, as imperfect as it was, made sense given everything you were navigating.",
+      "That doesn't mean you'd make the same decision today. You wouldn't because you're not the same person today. You've learned. You've grown. You've healed in ways that have changed how you see and move through the world. That growth is evidence of your strength not proof of your past failures.",
+      "The weight of what you wish you'd done differently was never meant to be carried forever. It was meant to teach you something. And you've learned it. Which means you're allowed to put it down now.",
+      "Set it down. Walk forward without it. The past already happened and it can't be changed. But your relationship with it can.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  5: {
+    title: "The Day You Decide You're Worth Forgiving",
+    content: [
+      "Nobody can give you this one. Not a therapist. Not a friend. Not a book. Not an app. Not even the most powerful lesson you've ever read. This one has to come from you.",
+      "The day you decide you're worth forgiving is not a day that arrives on its own. It's a day you choose. And like most important choices in the rebuilding journey it doesn't announce itself with fanfare or a feeling of absolute certainty. It usually arrives quietly in an ordinary moment when something inside you gets tired of carrying the weight and decides that enough is enough.",
+      "You've been through enough. You've lost enough. You've suffered enough. You've paid enough. Whatever debt you believe you owe for the choices you made during the abuse, for the time it took to leave, for the moments you weren't who you wanted to be, consider it paid. In full. By everything you've already been through.",
+      "Deciding you're worth forgiving doesn't mean you've arrived at a perfect place. It means you've decided to stop punishing yourself for being human in an inhuman situation. It means you're choosing to be on your own side. Maybe for the first time in a very long time.",
+      "Here's what that decision looks like in practice.",
+      "It looks like catching the self critical voice and responding to it differently. Not agreeing with it automatically. Not spiraling into the shame it's inviting you into. But pausing and saying that's not the truth about me anymore. I've decided differently.",
+      "It looks like allowing yourself to receive good things without immediately looking for the catch. Compliments. Kindness. Opportunities. Love. Letting them land without deflecting them or deciding you don't deserve them.",
+      "It looks like talking about yourself with the same basic respect you'd extend to anyone else. Not tearing yourself down in conversation. Not using humor to minimize your own worth. Not agreeing when someone treats you as less than because some part of you still believes you deserve less than.",
+      "It looks like getting up tomorrow and trying again even when today was hard. Because a person who has decided they're worth forgiving doesn't give up on themselves. They keep showing up. Imperfectly. Consistently. With grace.",
+      "You've just completed Course 7. You came in here carrying judgment you'd been holding against yourself for longer than you should have had to. You're leaving with something lighter. The beginning of a new verdict. One that says you did the best you could, you've learned what you needed to learn, and you are absolutely worth forgiving.",
+      "Say it out loud if you can. I am worth forgiving.",
+      "Then say it again tomorrow. And the day after that. Until the day it stops being something you have to convince yourself of and starts being something you simply know.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+};
+
+export const course12Worksheet = [
+  "One thing I've been blaming myself for that I'm ready to release is ___",
+  "A decision I made during the abuse that I'm choosing to view with compassion is ___",
+  "Today I am deciding that I am worth forgiving because ___",
+];

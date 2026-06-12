@@ -1,0 +1,81 @@
+export const course9Content = {
+  1: {
+    title: "Who Were You Before?",
+    content: [
+      "Before the relationship. Before the control. Before you learned to measure every word and anticipate every mood. There was a version of you that existed freely. Someone who had preferences, opinions, dreams, and a way of moving through the world that belonged entirely to them. That person didn't disappear. They went underground. And this lesson is about finding them again.",
+      "Think back to who you were before the abuse began.",
+      "What did you love to do? Not what you were allowed to do. Not what kept the peace. What did you genuinely enjoy before someone else's needs and moods became the center of your existence? Maybe it was music. Maybe it was cooking something elaborate just because you felt like it. Maybe it was being loud in a room full of people you loved. Maybe it was the quiet of early mornings before anyone else was awake. Whatever it was, it mattered. And it still does.",
+      "What did you dream about? Before survival became the primary goal, you had a vision for your life. A career you wanted. A place you wanted to live. A version of yourself you were working toward. Abuse has a way of making those dreams feel foolish or out of reach. They aren't. They were just interrupted.",
+      "Who did you used to be in a room full of people? Were you funny? Were you the one everyone came to for advice? Were you quietly observant or the loudest voice in the conversation? That person is still in there. Abuse dimmed them. It didn't delete them.",
+      "This isn't about going back. You can't go back and you wouldn't want to because you've learned too much. This is about recovering the parts of yourself that were yours before anyone tried to take them and bringing them forward into the life you're building now.",
+      "You were someone before this. And that someone is worth finding again.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  2: {
+    title: "What Abuse Replaced",
+    content: [
+      "Abuse doesn't just take things from you. It replaces them. And part of rediscovering who you are is identifying what was put in the place of the real you so you can begin to remove it deliberately.",
+      "Abuse replaced your confidence with hypervigilance. Where you once moved through the world with a reasonable sense of trust in yourself and your environment, abuse installed a constant state of alertness. Always scanning. Always anticipating. Always waiting for the next thing to go wrong. That hypervigilance kept you safer in a dangerous environment. But it isn't you. It's a survival mechanism that's still running even though the immediate danger has passed.",
+      "Abuse replaced your identity with a role. You became the appeaser. The peacekeeper. The one who managed everyone else's emotions while yours went unaddressed. You organized your entire personality around keeping someone else calm and that role became so consuming that at some point you may have forgotten there was a person underneath it. There is. That role was assigned to you. It was never who you actually are.",
+      "Abuse replaced your joy with relief. When joy is consistently punished or interrupted, you stop reaching for it. You start settling for the absence of pain instead. Relief becomes the ceiling. No yelling today becomes a good day. That's not living. That's surviving. And you deserve more than the absence of pain. You deserve the presence of joy.",
+      "Abuse replaced your future with survival. Long term thinking becomes a luxury when you're focused on getting through each day safely. Dreams get shelved. Plans get abandoned. The horizon disappears and all that's left is right now and how to manage it. Your future didn't disappear. It's been waiting for you to have enough safety to look up and see it again.",
+      "Removing what abuse put in place takes time and it takes intention. But it starts with recognizing that what you've been living with isn't the real you. It's what was built over you to keep you manageable.",
+      "Underneath all of it, you're still there.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  3: {
+    title: "Reclaiming Your Interests, Passions, and Joy",
+    content: [
+      "Reclaiming joy after abuse can feel strange at first. You might reach for something you used to love and feel nothing. Or you might feel guilty for enjoying yourself, as if happiness is something you haven't earned yet or something that will be taken away the moment you let yourself have it. Both of those responses make complete sense. And neither of them is permanent.",
+      "Joy doesn't always come back all at once. Sometimes it comes back in small moments that catch you off guard. A song that makes you stop what you're doing. A meal you cooked that tasted exactly the way you wanted it to. A conversation that made you laugh before you remembered you were supposed to be sad. Those moments aren't accidents. They're your joy finding its way back to you through the cracks.",
+      "Here's how to help it along.",
+      "Start with what you remember. Go back to the things you loved before the abuse began. Not to recreate the past but to reconnect with the part of you that existed before someone else's preferences replaced your own. If you loved painting, pick up a brush. If you loved dancing, put on a song when no one's watching. If you loved reading, find a book that has nothing to do with healing and just enjoy it. Give yourself permission to simply like what you like.",
+      "Try something new. Sometimes the person you're becoming is interested in things the person you were never had the chance to explore. You're not the same person you were before the abuse and that's not entirely a bad thing. You've grown in ways that are uniquely yours. Let your interests grow too. Take a class. Try a recipe you've never made. Go somewhere you've never been. Curiosity is one of joy's closest companions.",
+      "Release the guilt. You are allowed to feel good. You are allowed to laugh. You are allowed to have a day that feels light and easy without waiting for something to go wrong. Happiness is not a trap. It's not naive. It's not something you have to earn through enough suffering. It's yours. It always was.",
+      "Reclaiming joy is an act of defiance against everything abuse tried to take from you. Every moment you allow yourself to feel good is a moment that belongs entirely to you.",
+      "Take as many of those moments as you can.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  4: {
+    title: "Building a New Relationship With Your Body",
+    content: [
+      "Abuse changes your relationship with your body. Not just physical abuse. All abuse. Because when someone uses your body as a target for their anger, controls what you wear, monitors what you eat, deprives you of sleep, or uses intimacy as a tool of manipulation and control, your body stops feeling like a safe place to live. It becomes something you manage, hide, or disconnect from rather than something you inhabit with comfort and confidence.",
+      "Rebuilding that relationship is some of the most important work you'll do in this season.",
+      "Your body kept you alive. Before anything else, that deserves acknowledgment. Every time your heart raced because danger was near, your body was doing its job. Every time your stomach dropped before something bad happened, your instincts were working. Every time you felt exhausted beyond explanation, your body was processing something that would have broken most people. Your body wasn't your enemy during the abuse. It was working overtime to protect you. It deserves your gratitude not your criticism.",
+      "Reconnecting starts with small acts of care. You don't have to love your body immediately. You don't have to feel comfortable in it right away. But you can begin to treat it with basic kindness. Drinking enough water. Getting rest when you need it. Eating something nourishing. These aren't small things. They're the foundation of a new agreement between you and your body that says I'm going to take care of you now.",
+      "Notice without judgment. Abuse creates a habit of disconnecting from physical sensations because feeling them was too overwhelming. Part of rebuilding is learning to notice what your body is telling you without judging or dismissing it. When you feel tension, ask where it's coming from. When you feel calm, notice that too. Your body is communicating with you constantly. Learning to listen again is part of coming home to yourself.",
+      "Movement can help. Not as punishment. Not as a way to change how you look. But as a way to reconnect with what your body can do. Walking, stretching, dancing in your kitchen, whatever feels accessible and safe. Movement that comes from a place of care rather than criticism begins to rebuild trust between you and the body that carried you through everything.",
+      "You don't have to be at peace with your body today. But you can begin the conversation. And like every relationship worth having, it starts with showing up consistently with kindness.",
+      "Your body brought you this far. It'll carry you the rest of the way too.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  5: {
+    title: "Introducing Yourself to Yourself Again",
+    content: [
+      "This is the lesson that ties everything in Course 4 together. And it might be the most personal one you've read so far.",
+      "At some point during the abuse you lost the thread of who you are. Not all at once. Gradually. The things you loved got set aside. The dreams you had got buried. The way you used to show up in a room got quieter and smaller until one day you looked in the mirror and weren't entirely sure who was looking back.",
+      "That ends here.",
+      "Introducing yourself to yourself again isn't a dramatic moment. It doesn't require a grand gesture or a complete life overhaul. It's a quiet, deliberate decision to start paying attention to who you actually are right now. Not who you were before the abuse. Not who the abuse tried to make you. Who you are today, in this moment, with everything you've learned and survived and carried and released.",
+      "So let's start simply.",
+      "What do you believe? Not what you were told to believe. Not what kept the peace. What do you actually believe about the world, about people, about what matters? Your beliefs are yours. They don't require anyone's approval.",
+      "What do you need? Not what you were allowed to need. What do you actually need to feel safe, supported, and at peace? Naming your needs to yourself is the first step toward being able to ask for them from others.",
+      "What makes you feel most like yourself? There are moments, however rare, when something happens and you think yes, this is me. Maybe it's a conversation that lights you up. Maybe it's a creative act that makes time disappear. Maybe it's being in nature or being with a specific person who sees you clearly. Whatever those moments are, they're telling you something important about who you are. Pay attention to them.",
+      "What are you proud of? Not what others have praised you for. What do you look back on and feel genuinely proud of? You've survived something most people will never understand. That alone is something. But there's more. There are moments of courage, creativity, and grace in your story that deserve to be honored by you.",
+      "Write it down in your My Growth Journey journal. Your name. What you believe. What you need. What makes you feel most like yourself. What you're proud of. Read it back to yourself. That's not just a journal entry. That's an introduction. The beginning of a relationship with yourself that no one can take from you.",
+      "You've just completed Course 4. You came in here not entirely sure who was looking back at you in the mirror. You're leaving with the beginning of an answer.",
+      "Keep looking. Keep listening. Keep showing up for yourself the way you're learning to.",
+      "She's there. He's there. You're there.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+};
+
+export const course9Worksheet = [
+  "Three things I loved to do before the abuse began were ___",
+  "One dream I had that I'm ready to reconnect with is ___",
+  "What makes me feel most like myself right now is ___",
+];

@@ -1,0 +1,80 @@
+export const course7Content = {
+  1: {
+    title: "Why Your Voice Went Quiet",
+    content: [
+      "Your voice didn't disappear overnight. It was a gradual process, so slow you may not have noticed it happening until one day you realized you couldn't remember the last time you said exactly what you meant without measuring every word first.",
+      "That's what abuse does. It doesn't silence you all at once. It conditions you.",
+      "Every time you spoke up and it led to an argument, you learned to choose your words more carefully. Every time you expressed an opinion and it was mocked or dismissed, you learned to keep it to yourself. Every time you cried and were told you were too emotional, you learned to hold it in. Every time you said no and faced consequences for it, you learned that no wasn't safe.",
+      "These weren't character flaws developing. These were survival skills forming.",
+      "Your nervous system is incredibly intelligent. It watches patterns and adjusts your behavior to keep you as safe as possible. When speaking freely consistently led to pain, your nervous system did what it was designed to do. It found a way to protect you. Silence became that protection.",
+      "The problem is that survival skills don't automatically turn off when the danger is gone. You may be in a safer situation now but your body hasn't gotten the message yet. It's still operating from the old rules. Still measuring every word. Still bracing for a reaction that isn't coming anymore.",
+      "Understanding why your voice went quiet is the first step toward bringing it back. It didn't go quiet because you're weak. It didn't go quiet because you don't have anything worth saying. It went quiet because you were protecting yourself the only way you knew how at the time.",
+      "That time has passed. And your voice has been waiting patiently for this moment.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  2: {
+    title: "The Difference Between Silence and Peace",
+    content: [
+      "There's a silence that heals and a silence that hides. Learning to tell the difference between the two is one of the most important things you'll do in this season of rebuilding.",
+      "Peace is a silence you choose. It's the quiet that comes after a hard conversation has been handled. It's the stillness of a morning where no one is walking on eggshells. It's the calm of a space where you don't have to brace yourself for what comes next. That kind of silence restores you. It belongs to you. It feels like exhaling after holding your breath for a very long time.",
+      "The silence abuse created is different. It's not chosen. It's imposed. It's the silence of swallowing what you really wanted to say because saying it felt dangerous. It's the silence of nodding along when everything inside you was screaming otherwise. It's the silence of making yourself invisible so someone else could feel powerful. That kind of silence doesn't restore you. It depletes you. And over time it starts to feel so familiar that you mistake it for peace.",
+      "It isn't peace. It's survival.",
+      "One of the signs that you're healing is that you begin to feel the difference. A moment of quiet that once would have felt like relief starts to feel like something is missing. That discomfort isn't a setback. It's your voice reminding you that it's still there and it has things to say.",
+      "Let it.",
+      "You don't have to say everything at once. You don't have to make up for every swallowed word in a single conversation. But start noticing the moments when you go quiet and ask yourself honestly. Is this the peace I'm choosing? Or is this the silence I was conditioned to keep?",
+      "That question alone will change everything.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  3: {
+    title: "Saying What You Mean Without Fear",
+    content: [
+      "Saying what you mean sounds simple until you've spent years in a situation where your words were used against you. Then it becomes one of the most complicated things imaginable.",
+      "You learned to speak in a way that minimized risk. You softened your tone so it wouldn't be mistaken for aggression. You added qualifiers so your opinion wouldn't sound too strong. You apologized before you even finished a sentence so the other person wouldn't feel challenged. You became fluent in a language designed to keep the peace at the expense of your truth.",
+      "That language kept you safer then. It doesn't serve you now.",
+      "Saying what you mean without fear doesn't mean saying everything that comes to mind without filter. It means that when something matters to you, you don't automatically bury it to manage someone else's reaction. It means your needs get to be stated clearly. Your boundaries get to be firm. Your opinions get to exist without a disclaimer attached.",
+      "Here's where to start.",
+      "Notice the qualifiers. Pay attention to how often you begin sentences with I could be wrong but or this might sound silly or I don't want to cause any trouble. These phrases are the residue of conditioning. They were taught to you by someone who needed you to doubt yourself before you even finished speaking. Start removing them one at a time.",
+      "Say the thing. When something bothers you, practice naming it in a simple and direct sentence. Not a paragraph of explanation and apology. Just the thing. That didn't feel right to me. I need more time before I decide. I'm not comfortable with that. Short, clear, and true.",
+      "Expect discomfort. The first several times you speak directly without softening it, it's going to feel wrong. Your body is going to brace for a reaction. That's the conditioning. It fades with practice. The more you speak your truth and nothing bad happens, the more your nervous system learns that your voice is safe.",
+      "Your words were never the problem. They were just too powerful for someone who needed you small.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  4: {
+    title: "Setting the Record Straight With Yourself",
+    content: [
+      "Before you can fully reclaim your voice with others, you have to set the record straight with yourself. Because somewhere in the middle of the abuse, you may have started to believe the narrative that was written about you. And that narrative was wrong.",
+      "Let's correct it.",
+      "You were told you were too sensitive. The truth is you were perceptive. You felt things accurately. Your sensitivity wasn't a flaw, it was a signal. It was telling you something was wrong long before you had the words for it. The problem was never that you felt too much. The problem was that you were in a situation that gave you too much to feel.",
+      "You were told you were the cause of the conflict. The truth is conflict was created to control you. Healthy relationships have disagreements. They don't have cycles of punishment designed to keep one person afraid and the other in power. You didn't cause the abuse by saying the wrong thing or doing the wrong thing. Abuse is a choice the abuser makes. It was never yours to own.",
+      "You were told no one would believe you. The truth is your story is real, it's valid, and it deserves to be heard. The people who didn't believe you weren't seeing clearly. That's their limitation, not your truth.",
+      "You were told you couldn't make it on your own. The truth is you're already doing it.",
+      "Setting the record straight with yourself means going back through what you were told and holding it up to the light of what's actually true. It means retiring the story someone else wrote about you and beginning to write your own. It means looking in the mirror and introducing yourself to the person standing there. Not the person abuse tried to create. The person who survived it.",
+      "That person is remarkable. And it's time you knew it.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  5: {
+    title: "Your Voice Is Your Power",
+    content: [
+      "You've made it to the final lesson of Course 2. And if you've been doing the work, something has already started to shift. Maybe it's subtle. Maybe you've caught yourself saying what you meant in a moment when you would have stayed quiet before. Maybe you've noticed the difference between the silence that restores you and the silence that shrinks you. Maybe you've started to correct the record on the story that was written about you without your permission.",
+      "That's your voice coming back. And it's coming back because it was never truly gone.",
+      "Here's what you need to understand about your voice. It isn't just the words you speak out loud. It's the boundaries you hold. It's the decisions you make for yourself. It's the way you show up in a room and take up the space you're entitled to. It's the no you say when no is the right answer. It's the yes you give freely when it comes from a place of genuine choice and not fear. Your voice is the full expression of who you are and what you stand for.",
+      "Abuse tried to make you believe your voice was dangerous. And in that environment it was, because it threatened the control your abuser depended on. A person who speaks clearly, asks questions, and knows their worth cannot be easily manipulated. Your voice was a threat to their power. That's why it had to be silenced.",
+      "But you're not in that environment anymore.",
+      "Your voice is one of your greatest tools in this season of rebuilding. It's how you ask for what you need. It's how you protect yourself going forward. It's how you teach others how to treat you. It's how you tell your story on your own terms. It's how you help the next person who is walking the road you just came off of.",
+      "Don't waste it on silence that was never yours to keep.",
+      "You've just completed Course 2. Your voice was silenced on purpose. You're reclaiming it on purpose. And that is one of the most powerful acts of defiance and healing available to a survivor.",
+      "Speak. The world needs to hear what you have to say.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+};
+
+export const course7Worksheet = [
+  "One moment when I stayed silent but wish I had spoken was ___",
+  "The difference between peace and survival silence in my life is ___",
+  "One thing I will say clearly this week without apologizing is ___",
+];

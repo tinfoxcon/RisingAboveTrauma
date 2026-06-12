@@ -1,0 +1,82 @@
+export const course6Content = {
+  1: {
+    title: "What Abuse Took From You",
+    content: [
+      "Abuse doesn't just leave bruises. It leaves behind a version of you that you don't recognize. Someone who second guesses every decision. Someone who apologizes for taking up space. Someone who's forgotten what it feels like to trust their own instincts. That's not weakness. That's what prolonged abuse does to a person, and it was done deliberately.",
+      "Your abuser needed you to doubt yourself. A person who trusts themselves is harder to control. A person who knows their worth is harder to manipulate. A person who advocates for themselves is harder to silence. So piece by piece, through criticism, isolation, humiliation, and fear, abuse dismantled the very things that made you strong.",
+      "What was silenced from you was not lost by accident. It was silenced on purpose.",
+      "Self trust was the first to go. Every time you said something was wrong and were told you were imagining it, self trust took a hit. Every time you felt afraid and were told you were overreacting, self trust took a hit. Every time you made a decision and were ridiculed for it, self trust took a hit. Over time those hits add up and the voice inside you that once spoke clearly became a whisper. Then silence.",
+      "Self worth followed. When someone treats you as though you're less than, charges you with their unhappiness, and makes you feel lucky to be loved at all, you begin to believe it. Not because it's true. Because repetition is powerful and abuse is relentless.",
+      "Self advocacy went last. Because by the time abuse has taken your trust and your worth, speaking up for yourself feels dangerous. And sometimes it was. So you learned to stay quiet, stay small, and stay safe.",
+      "You did what you had to do to survive. And you did survive. That's why you're here.",
+      "This course exists to give back what was taken. Not all at once. Deliberately. The same way it was dismantled, it'll be rebuilt. One lesson at a time.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  2: {
+    title: "Self Trust: Hearing Your Own Voice Again",
+    content: [
+      "Self trust is the ability to believe what you know, feel what you feel, and act on what you sense without needing someone else to confirm it first. It sounds simple. For a survivor of abuse it's one of the hardest things to reclaim.",
+      "You were taught not to trust yourself. Every time you said something was wrong and were told you were imagining it, self trust took a hit. Every time you felt afraid and were told you were overreacting, self trust took a hit. Every time you made a decision and were ridiculed for it, self trust took a hit. Over time those hits add up and the voice inside you that once spoke clearly became a whisper. Then silence.",
+      "That voice is still there.",
+      "It never left. It was drowned out. There's a difference between a voice that's gone and a voice that's been suppressed. Yours was suppressed. And suppressed things come back when they're given permission.",
+      "Here's how you begin to hear it again.",
+      "Start small. Self trust is rebuilt through small decisions, not large ones. What do you want for dinner tonight? Which route feels safer to take? Which person in your life makes you feel at ease and which one makes you feel uneasy? These small moments of checking in with yourself and then honoring what comes up are the beginning of rebuilding the relationship.",
+      "Notice the second guessing. When you make a decision and immediately wonder if it was wrong, pause. Ask yourself where that doubt is coming from. Is it coming from evidence or is it coming from a habit of being told you're wrong? Most of the time you'll find it's the habit, not the truth.",
+      "Write it down. Keeping a simple record of moments when your instinct was right builds evidence over time. Evidence that you can look back on when the doubt gets loud. Your Growth Journey journal is the right place for this.",
+      "Your voice was never the problem. It was silenced because it was powerful. The fact that it made someone that uncomfortable tells you everything you need to know about how strong it actually is.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  3: {
+    title: "Self Worth: You Were Never The Problem",
+    content: [
+      "Self worth is the quiet inner knowing that you matter. Not because of what you do, what you produce, how you look, or how well you manage someone else's emotions. You matter because you exist. That's it. That's the whole foundation.",
+      "Abuse dismantles that foundation brick by brick.",
+      "It starts with criticism that feels like concern. Then correction that feels like guidance. Then control that feels like love. By the time you recognize what's happening, you've spent months or years absorbing the message that you're not enough. Not smart enough. Not quiet enough. Not strong enough. Not good enough. And the most dangerous part is that you didn't get that message from a stranger. You got it from someone you loved and trusted. That's why it stuck.",
+      "Let this be clear. You were never the problem.",
+      "The abuse was never about your shortcomings. It was about your abuser's need for power and control. A person who's secure in themselves doesn't need to tear another person down. What was done to you was a reflection of who they are, not who you are. You weren't too sensitive. You weren't too difficult. You weren't too much. You were targeted because you were worthy of love and they weren't capable of giving it.",
+      "Rebuilding self worth starts with separating their words from your truth.",
+      "Every cruel thing that was said to you was a projection, not a fact. Begin to notice when those old messages surface in your daily life. When you hear a voice in your head that sounds more like your abuser than yourself, that's not your truth speaking. That's a wound that hasn't finished healing yet. Acknowledge it. Then replace it deliberately with what you know to be true about yourself.",
+      "You're worthy of safety. You're worthy of peace. You're worthy of love that doesn't cost you your identity. You always were. The abuse didn't change that. It only convinced you otherwise for a time.",
+      "That time is over.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  4: {
+    title: "Self Advocacy: Speaking Up For Yourself",
+    content: [
+      "There's a moment every survivor knows. The moment you had something important to say and chose silence instead because speaking up didn't feel safe. You learned that lesson the hard way. Silence became a survival strategy and it worked. It kept you safer in the moment.",
+      "But you're not in that moment anymore.",
+      "Self advocacy is the ability to speak up for your needs, your rights, and your truth without apologizing for it. It doesn't mean being aggressive. It doesn't mean being confrontational. It means being clear. It means saying what you need, what you won't accept, and what you deserve without shrinking yourself to make someone else comfortable.",
+      "Abuse made that feel impossible. Here's why.",
+      "When speaking up consistently led to punishment, your nervous system learned to associate your own voice with danger. That's not a character flaw. That's a trauma response. Your body was protecting you. Now the work is teaching your body that it's safe to speak again.",
+      "Start with low stakes situations. Practice stating your preference when someone asks where you'd like to eat. Practice saying no to something small that you don't want to do. Practice asking for what you need from someone you trust. These aren't trivial exercises. They're the training ground for your voice.",
+      "Know your rights. You have the right to say no. You have the right to change your mind. You have the right to ask questions. You have the right to take up space in a conversation. You have the right to disagree. None of these require an explanation or an apology.",
+      "When the old fear shows up, and it will, remind yourself that you're no longer in a situation where your voice is a threat to your safety. You're in a new chapter. And in this chapter your voice is one of your greatest tools.",
+      "It always was.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+  5: {
+    title: "The Decision To Rebuild",
+    content: [
+      "Rebuilding isn't something that happens to you. It's something you decide.",
+      "That distinction matters more than it might seem right now. Because after everything you've been through, it would make complete sense to wait. To wait until you feel ready. To wait until the fear subsides. To wait until life settles down and the path forward becomes clearer. But waiting for the perfect moment to rebuild is how months become years and years become a life that never quite started again.",
+      "The decision to rebuild doesn't require certainty. It doesn't require courage you don't feel yet. It doesn't require having a plan. It only requires one thing. A willingness to take the next step even when you can't see the full staircase.",
+      "You've already made harder decisions than this one.",
+      "You decided to survive. In the middle of chaos, fear, and uncertainty you found a way to keep going. That wasn't luck. That was a decision made over and over again in moments when giving up would have been easier. You made it here because of choices you made under conditions most people will never understand. If you could do that, you can decide to rebuild.",
+      "Rebuilding looks different for everyone. For some it starts with finding a safe place to sleep. For others it starts with a single honest conversation with someone they trust. For some it's opening this app for the first time. There's no wrong starting point. The only requirement is that you start.",
+      "Here's what rebuilding is not. It's not forgetting what happened. It's not pretending the abuse didn't leave marks. It's not rushing past the grief of what you lost. Rebuilding holds all of that and moves forward anyway. You don't have to be over it to begin. You just have to be willing.",
+      "And you are. You're here. That's the decision already made.",
+      "You've just completed Lesson 5 of Course 1. You've taken the first steps toward rebuilding your relationship with yourself. Self trust, self worth, and self advocacy are not gone. They were silenced. And you've just given them permission to speak again.",
+      "You are a Warrior. And you are rising.",
+    ],
+  },
+};
+
+export const course6Worksheet = [
+  "One thing abuse took from me that I am beginning to reclaim is ___",
+  "A small decision I can make today to rebuild self trust is ___",
+  "I know I am worthy because ___",
+];
