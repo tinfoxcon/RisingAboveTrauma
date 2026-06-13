@@ -1,6 +1,6 @@
 import sql from "@/app/api/utils/sql";
 import { hash } from "argon2";
-import { encodeMobileAuthToken } from "@/app/api/utils/authJwt";
+import { encode } from "@auth/core/jwt";
 
 export async function POST(request) {
   try {
@@ -60,14 +60,20 @@ export async function POST(request) {
     `;
 
     // Generate a real signed JWT so mobile can authenticate future API requests
-    const jwt = await encodeMobileAuthToken(
-      {
+    const isSecure = process.env.AUTH_URL?.startsWith("https") ?? false;
+    const salt = isSecure
+      ? "__Secure-authjs.session-token"
+      : "authjs.session-token";
+    const jwt = await encode({
+      token: {
         sub: newUser.id.toString(),
         email: newUser.email,
         name: newUser.name,
       },
-      request,
-    );
+      secret: process.env.AUTH_SECRET,
+      salt,
+      maxAge: 30 * 24 * 60 * 60, // 30 days — explicit to avoid version-specific defaults
+    });
 
     return Response.json({
       user: {

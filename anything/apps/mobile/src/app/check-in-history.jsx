@@ -30,9 +30,9 @@ export default function CheckInHistoryScreen() {
     setLoadError(null);
     setLoading(true);
     try {
-      const response = await fetchWithAuth("/api/checkins/list");
+      const response = await fetchWithAuth("/api/checkins/entries");
       if (!response.ok) {
-        console.error("checkins/list error:", response.status);
+        console.error("checkins/entries error:", response.status);
         setLoadError(
           response.status === 401
             ? "Session expired — please sign out and back in."

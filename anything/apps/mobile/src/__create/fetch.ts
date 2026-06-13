@@ -76,18 +76,16 @@ const fetchToWeb = async function fetchWithHeaders(...args: Params) {
     }
   }
 
-  if (!finalHeaders.has('authorization')) {
-    const auth = await SecureStore.getItemAsync(authKey)
-      .then((auth) => {
-        return auth ? JSON.parse(auth) : null;
-      })
-      .catch(() => {
-        return null;
-      });
+  const auth = await SecureStore.getItemAsync(authKey)
+    .then((auth) => {
+      return auth ? JSON.parse(auth) : null;
+    })
+    .catch(() => {
+      return null;
+    });
 
-    if (auth?.jwt) {
-      finalHeaders.set('authorization', `Bearer ${auth.jwt}`);
-    }
+  if (auth) {
+    finalHeaders.set('authorization', `Bearer ${auth.jwt}`);
   }
 
   return expoFetch(finalInput, {

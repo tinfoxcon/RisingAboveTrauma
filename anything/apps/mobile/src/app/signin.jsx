@@ -16,6 +16,11 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useAuthStore } from "@/utils/auth/store";
 import usePreventBack from "@/utils/usePreventBack";
 
+// In native production / TestFlight builds React Native fetch has no implicit
+// base URL. We must use an absolute URL so the request reaches the server.
+const BASE_URL =
+  Platform.OS !== "web" ? process.env.EXPO_PUBLIC_BASE_URL || "" : "";
+
 export default function SignInScreen() {
   const insets = useSafeAreaInsets();
   const [email, setEmail] = useState("");
@@ -73,7 +78,7 @@ export default function SignInScreen() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/auth/mobile-signin", {
+      const response = await fetch(`${BASE_URL}/api/auth/mobile-signin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

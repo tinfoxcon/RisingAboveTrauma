@@ -11,8 +11,8 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { LinearGradient } from "expo-linear-gradient";
 import SafetyButtons from "@/components/SafetyButtons";
-import { useAuth } from "@/utils/auth/useAuth";
 import { useAuthStore } from "@/utils/auth/store";
+import { fetchWithAuth } from "@/utils/fetchWithAuth";
 import useSinglePress from "@/utils/useSinglePress";
 
 export default function OnboardingScreen() {
@@ -22,32 +22,33 @@ export default function OnboardingScreen() {
   const [selectedPath, setSelectedPath] = useState(null);
   const [protectingChildren, setProtectingChildren] = useState(null);
   const [completing, setCompleting] = useState(false);
-  const { auth } = useAuth();
-  const { setAuth } = useAuthStore();
+  const { auth, setAuth } = useAuthStore();
   const guard = useSinglePress();
 
   const handleComplete = guard(async () => {
     setCompleting(true);
     try {
-      const headers = {
-        "Content-Type": "application/json",
-      };
-
-      if (auth?.jwt) {
-        headers["Authorization"] = `Bearer ${auth.jwt}`;
-      }
-
-      const baseURL = process.env.EXPO_PUBLIC_PROXY_BASE_URL || "";
-      const response = await fetch(`${baseURL}/api/onboarding/complete`, {
+      // fetchWithAuth always reads the JWT from the store at call time,
+      // so it is never stale even if the component rendered before auth loaded.
+      const response = await fetchWithAuth("/api/onboarding/complete", {
         method: "POST",
-        headers,
         body: JSON.stringify({
           current_path: selectedPath,
           protecting_children: protectingChildren,
         }),
       });
 
-      if (response.ok && auth) {
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        throw new Error(
+          payload?.error ||
+            "We couldn't save your onboarding progress. Please try again.",
+        );
+      }
+
+      // Update the in-memory auth store so the rest of the app
+      // immediately sees onboarded = true and the selected path.
+      if (auth) {
         setAuth({
           ...auth,
           user: {
@@ -60,6 +61,8 @@ export default function OnboardingScreen() {
       }
     } catch (error) {
       console.error("Onboarding save failed:", error);
+      // Still navigate forward — the server-side update is best-effort
+      // at this stage; the user shouldn't be stuck on the onboarding screen.
     } finally {
       setCompleting(false);
     }
