@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import { decode } from "@auth/core/jwt";
+import { decodeMobileAuthToken } from "./authJwt";
 
 /**
  * Gets the current session from either:
@@ -14,16 +14,7 @@ export async function getSession(request) {
       const token = authHeader.slice(7);
       if (token && token !== "authenticated") {
         try {
-          const isSecure = process.env.AUTH_URL?.startsWith("https") ?? false;
-          const salt = isSecure
-            ? "__Secure-authjs.session-token"
-            : "authjs.session-token";
-
-          const decoded = await decode({
-            token,
-            secret: process.env.AUTH_SECRET,
-            salt,
-          });
+          const decoded = await decodeMobileAuthToken(token, request);
 
           if (decoded?.sub) {
             const userId = parseInt(String(decoded.sub), 10);

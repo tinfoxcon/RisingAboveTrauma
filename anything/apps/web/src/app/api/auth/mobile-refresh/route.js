@@ -1,6 +1,6 @@
-import { encode } from "@auth/core/jwt";
 import sql from "@/app/api/utils/sql";
 import { getSession } from "@/app/api/utils/getSession";
+import { encodeMobileAuthToken } from "@/app/api/utils/authJwt";
 
 export async function POST(request) {
   try {
@@ -36,19 +36,14 @@ export async function POST(request) {
     }
 
     const user = rows[0];
-    const isSecure = process.env.AUTH_URL?.startsWith("https") ?? false;
-    const salt = isSecure
-      ? "__Secure-authjs.session-token"
-      : "authjs.session-token";
-    const jwt = await encode({
-      token: {
+    const jwt = await encodeMobileAuthToken(
+      {
         sub: String(user.id),
         email: user.email,
         name: user.name,
       },
-      secret: process.env.AUTH_SECRET,
-      salt,
-    });
+      request,
+    );
 
     return Response.json({
       success: true,
