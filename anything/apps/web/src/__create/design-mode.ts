@@ -1,9 +1,20 @@
 /**
  * Web design mode — extracts Tailwind className and computed styles
  * from DOM elements.
+ *
+ * The public repo copy does not include the private shared design-mode module,
+ * so this file provides a local no-op fallback that keeps production builds
+ * self-contained.
  */
 
-import { type GetStyleInfo, initDesignMode } from '../../../../shared/design-mode';
+type GetStyleInfo = (resolved: { element: Element | null }) => {
+  className: string;
+  styles: Record<string, string> | null;
+};
+
+function initDesignMode(_getStyleInfo: GetStyleInfo) {
+  return () => {};
+}
 
 // Registers the <hex-color-picker> custom element used by the design toolbar's
 // background-color dropdown. Loaded conditionally because the package executes
