@@ -68,9 +68,7 @@
       }
     },
     "owner": "create-inc",
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/5ad4f15f-6e91-4baf-a4f0-dde20ebb0973"
     }
