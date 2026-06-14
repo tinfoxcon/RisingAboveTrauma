@@ -1,6 +1,7 @@
 import { useAuthStore } from "./auth/store";
 import { router } from "expo-router";
 import { Platform } from "react-native";
+import { getBaseUrl } from "./runtimeConfig";
 
 /**
  * In development, Expo's proxy resolves relative URLs automatically.
@@ -9,7 +10,7 @@ import { Platform } from "react-native";
  * We must prepend the absolute server URL for all native (non-web) builds.
  */
 const BASE_URL =
-  Platform.OS !== "web" ? process.env.EXPO_PUBLIC_BASE_URL || "" : "";
+  Platform.OS !== "web" ? getBaseUrl() || "" : "";
 
 function resolveUrl(url) {
   if (!url || url.startsWith("http://") || url.startsWith("https://")) {

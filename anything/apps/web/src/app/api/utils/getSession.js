@@ -1,18 +1,5 @@
 import { auth } from "@/auth";
-import { decode } from "@auth/core/jwt";
-
-/**
- * Try to decode a JWT token with a given salt.
- * Returns the decoded payload or null on failure.
- */
-async function tryDecode(token, secret, salt) {
-  try {
-    const decoded = await decode({ token, secret, salt });
-    return decoded || null;
-  } catch {
-    return null;
-  }
-}
+import { decodeMobileAuthToken } from "./authJwt";
 
 /**
  * Gets the current session from either:
@@ -31,21 +18,7 @@ export async function getSession(request) {
       const token = authHeader.slice(7);
       if (token && token !== "authenticated") {
         try {
-          const secret = process.env.AUTH_SECRET;
-          const isSecure = process.env.AUTH_URL?.startsWith("https") ?? false;
-
-          // Primary salt — matches the environment the server is currently running in
-          const primarySalt = isSecure
-            ? "__Secure-authjs.session-token"
-            : "authjs.session-token";
-          // Fallback salt — covers tokens minted in the opposite environment
-          const fallbackSalt = isSecure
-            ? "authjs.session-token"
-            : "__Secure-authjs.session-token";
-
-          let decoded =
-            (await tryDecode(token, secret, primarySalt)) ||
-            (await tryDecode(token, secret, fallbackSalt));
+          const decoded = await decodeMobileAuthToken(token, request);
 
           if (decoded?.sub) {
             const userId = parseInt(String(decoded.sub), 10);

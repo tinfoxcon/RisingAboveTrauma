@@ -1,5 +1,8 @@
-import { encode, decode } from "@auth/core/jwt";
 import sql from "@/app/api/utils/sql";
+import {
+  decodeMobileAuthToken,
+  encodeMobileAuthToken,
+} from "@/app/api/utils/authJwt";
 
 /**
  * POST /api/auth/mobile-token-refresh
@@ -18,26 +21,7 @@ export async function POST(request) {
     }
 
     const token = authHeader.slice(7);
-    const secret = process.env.AUTH_SECRET;
-    const isSecure = process.env.AUTH_URL?.startsWith("https") ?? false;
-
-    const primarySalt = isSecure
-      ? "__Secure-authjs.session-token"
-      : "authjs.session-token";
-    const fallbackSalt = isSecure
-      ? "authjs.session-token"
-      : "__Secure-authjs.session-token";
-
-    // Try to decode with both salt variants
-    let decoded = null;
-    try {
-      decoded = await decode({ token, secret, salt: primarySalt });
-    } catch {}
-    if (!decoded?.sub) {
-      try {
-        decoded = await decode({ token, secret, salt: fallbackSalt });
-      } catch {}
-    }
+    const decoded = await decodeMobileAuthToken(token, request);
 
     if (!decoded?.sub) {
       return Response.json(
@@ -69,16 +53,18 @@ export async function POST(request) {
     const user = userRows[0];
 
     // Mint a fresh JWT with a new 30-day expiry
-    const newJwt = await encode({
-      token: {
+    const newJwt = await encodeMobileAuthToken(
+      {
         sub: user.id.toString(),
         email: user.email,
         name: user.name,
       },
-      secret,
-      salt: primarySalt,
-      maxAge: 30 * 24 * 60 * 60, // 30 days
-    });
+      request,
+    );
+
+    if (!newJwt || typeof newJwt !== "string") {
+      throw new Error("Failed to refresh mobile auth token");
+    }
 
     return Response.json({
       jwt: newJwt,

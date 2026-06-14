@@ -14,12 +14,12 @@ import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { useAuthStore } from "@/utils/auth/store";
+import {
+  extractAuthPayload,
+  getUserFacingApiError,
+  readJsonResponse,
+} from "@/utils/apiResponse";
 import usePreventBack from "@/utils/usePreventBack";
-
-// In native production / TestFlight builds React Native fetch has no implicit
-// base URL. We must use an absolute URL so the request reaches the server.
-const BASE_URL =
-  Platform.OS !== "web" ? process.env.EXPO_PUBLIC_BASE_URL || "" : "";
 
 export default function SignInScreen() {
   const insets = useSafeAreaInsets();
@@ -78,7 +78,7 @@ export default function SignInScreen() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${BASE_URL}/api/auth/mobile-signin`, {
+      const response = await fetch("/api/auth/mobile-signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,25 +86,35 @@ export default function SignInScreen() {
         body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
+      const data = await readJsonResponse(response, { action: "Sign in" });
 
       if (!response.ok) {
-        setError(data.error || "Sign in failed");
-        setLoading(false);
+        setError(data?.error || data?.message || "Sign in failed");
         return;
+      }
+
+      const authPayload = extractAuthPayload(data);
+      if (!authPayload) {
+        console.log("SignIn Data: ", data);
+        
+        if (data?.error || data?.message) {
+          throw new Error(data.error || data.message);
+        }
+        throw new Error("Sign in failed. Invalid server response.");
       }
 
       // Set auth state with user data and real JWT for authenticated API calls
       setAuth({
-        user: data.user,
-        jwt: data.jwt,
+        user: authPayload.user,
+        jwt: authPayload.jwt,
       });
 
       // Navigate to home
       router.replace("/");
     } catch (err) {
       console.error("Sign in error:", err);
-      setError("Network error. Please try again.");
+      setError(getUserFacingApiError(err));
+    } finally {
       setLoading(false);
     }
   };

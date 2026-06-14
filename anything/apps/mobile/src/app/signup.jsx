@@ -14,12 +14,12 @@ import { StatusBar } from "expo-status-bar";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { useAuthStore } from "@/utils/auth/store";
+import {
+  extractAuthPayload,
+  getUserFacingApiError,
+  readJsonResponse,
+} from "@/utils/apiResponse";
 import usePreventBack from "@/utils/usePreventBack";
-
-// In native production / TestFlight builds React Native fetch has no implicit
-// base URL. We must use an absolute URL so the request reaches the server.
-const BASE_URL =
-  Platform.OS !== "web" ? process.env.EXPO_PUBLIC_BASE_URL || "" : "";
 
 export default function SignUpScreen() {
   const insets = useSafeAreaInsets();
@@ -95,7 +95,7 @@ export default function SignUpScreen() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${BASE_URL}/api/auth/mobile-signup`, {
+      const response = await fetch("/api/auth/mobile-signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -103,25 +103,33 @@ export default function SignUpScreen() {
         body: JSON.stringify({ name, email, password }),
       });
 
-      const data = await response.json();
+      const data = await readJsonResponse(response, { action: "Sign up" });
 
       if (!response.ok) {
-        setError(data.error || "Sign up failed");
-        setLoading(false);
+        setError(data?.error || data?.message || "Sign up failed");
         return;
+      }
+
+      const authPayload = extractAuthPayload(data);
+      if (!authPayload) {
+        if (data?.error || data?.message) {
+          throw new Error(data.error || data.message);
+        }
+        throw new Error("Sign up failed. Invalid server response.");
       }
 
       // Set auth state with user data and real JWT for authenticated API calls
       setAuth({
-        user: data.user,
-        jwt: data.jwt,
+        user: authPayload.user,
+        jwt: authPayload.jwt,
       });
 
       // Navigate to onboarding for new users
       router.replace("/onboarding");
     } catch (err) {
       console.error("Sign up error:", err);
-      setError("Network error. Please try again.");
+      setError(getUserFacingApiError(err));
+    } finally {
       setLoading(false);
     }
   };
