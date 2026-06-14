@@ -75,6 +75,45 @@ export function extractAuthPayload(data) {
   return null;
 }
 
+export async function resolveAuthPayloadFromResponse(
+  data,
+  { action = "Request", tokenEndpoint = "/api/auth/token" } = {},
+) {
+  const directPayload = extractAuthPayload(data);
+  if (directPayload) {
+    return directPayload;
+  }
+
+  if (!data?.success || !data?.user) {
+    return null;
+  }
+
+  const response = await fetch(tokenEndpoint, {
+    method: "GET",
+    credentials: "include",
+  });
+  const tokenData = await readJsonResponse(response, {
+    action: `${action} token exchange`,
+  });
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const tokenPayload = extractAuthPayload(tokenData);
+  if (!tokenPayload) {
+    return null;
+  }
+
+  return {
+    jwt: tokenPayload.jwt,
+    user: {
+      ...data.user,
+      ...tokenPayload.user,
+    },
+  };
+}
+
 export function getUserFacingApiError(
   error,
   fallbackMessage = "Network error. Please try again.",

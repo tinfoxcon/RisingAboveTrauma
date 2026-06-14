@@ -59,6 +59,7 @@ export async function POST(request) {
       )
     `;
 
+    // Generate a real signed JWT so mobile can authenticate future API requests
     const jwt = await encodeMobileAuthToken(
       {
         sub: newUser.id.toString(),

@@ -1,9 +1,6 @@
 import { router } from "expo-router";
-import * as SecureStore from "expo-secure-store";
-import { useCallback, useEffect, useMemo } from "react";
-import { create } from "zustand";
-import { Modal, View } from "react-native";
-import { useAuthModal, useAuthStore, authKey } from "./store";
+import { useCallback, useEffect } from "react";
+import { readStoredAuth, useAuthModal, useAuthStore } from "./store";
 
 /**
  * This hook provides authentication functionality.
@@ -13,19 +10,16 @@ import { useAuthModal, useAuthStore, authKey } from "./store";
  */
 export const useAuth = () => {
   const { isReady, auth, setAuth } = useAuthStore();
-  const { isOpen, close, open } = useAuthModal();
+  const { close } = useAuthModal();
 
   const initiate = useCallback(() => {
-    // Load stored session - will be cleared by AppState when app backgrounds
-    SecureStore.getItemAsync(authKey).then((auth) => {
+    readStoredAuth().then((auth) => {
       useAuthStore.setState({
-        auth: auth ? JSON.parse(auth) : null,
+        auth,
         isReady: true,
       });
     });
   }, []);
-
-  useEffect(() => {}, []);
 
   const signIn = useCallback(() => {
     router.push("/signin");
@@ -37,8 +31,6 @@ export const useAuth = () => {
 
   const signOut = useCallback(
     ({ redirect = true } = {}) => {
-      // Clear auth from secure storage
-      SecureStore.deleteItemAsync(authKey).catch(console.error);
       setAuth(null);
       close();
 
@@ -67,7 +59,6 @@ export const useAuth = () => {
  */
 export const useRequireAuth = (options) => {
   const { isAuthenticated, isReady } = useAuth();
-  const { open } = useAuthModal();
 
   useEffect(() => {
     if (!isAuthenticated && isReady) {

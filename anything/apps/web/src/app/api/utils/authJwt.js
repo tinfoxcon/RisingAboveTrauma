@@ -3,6 +3,15 @@ import { decode, encode } from "@auth/core/jwt";
 export const LEGACY_AUTH_SESSION_SALT = "authjs.session-token";
 export const SECURE_AUTH_SESSION_SALT = "__Secure-authjs.session-token";
 
+function getRequiredAuthSecret() {
+  const secret = process.env.AUTH_SECRET;
+  if (!secret) {
+    throw new Error("AUTH_SECRET is not configured");
+  }
+
+  return secret;
+}
+
 function requestUsesHttps(request) {
   const forwardedProto = request?.headers?.get?.("x-forwarded-proto");
   if (forwardedProto) {
@@ -29,7 +38,7 @@ function requestUsesHttps(request) {
         return false;
       }
     } catch {
-      // Ignore invalid URLs and continue checking.
+      // Ignore invalid URLs and try the next candidate.
     }
   }
 
@@ -56,7 +65,7 @@ export async function decodeMobileAuthToken(token, request) {
     try {
       const decoded = await decode({
         token,
-        secret: process.env.AUTH_SECRET,
+        secret: getRequiredAuthSecret(),
         salt,
       });
 
@@ -78,7 +87,7 @@ export async function decodeMobileAuthToken(token, request) {
 export async function encodeMobileAuthToken(token, request) {
   return encode({
     token,
-    secret: process.env.AUTH_SECRET,
+    secret: getRequiredAuthSecret(),
     salt: getPreferredAuthSessionSalt(request),
     maxAge: 30 * 24 * 60 * 60,
   });

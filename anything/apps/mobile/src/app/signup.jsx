@@ -15,9 +15,9 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { useAuthStore } from "@/utils/auth/store";
 import {
-  extractAuthPayload,
   getUserFacingApiError,
   readJsonResponse,
+  resolveAuthPayloadFromResponse,
 } from "@/utils/apiResponse";
 import usePreventBack from "@/utils/usePreventBack";
 
@@ -97,6 +97,7 @@ export default function SignUpScreen() {
     try {
       const response = await fetch("/api/auth/mobile-signup", {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
@@ -110,12 +111,16 @@ export default function SignUpScreen() {
         return;
       }
 
-      const authPayload = extractAuthPayload(data);
+      const authPayload = await resolveAuthPayloadFromResponse(data, {
+        action: "Sign up",
+      });
       if (!authPayload) {
         if (data?.error || data?.message) {
           throw new Error(data.error || data.message);
         }
-        throw new Error("Sign up failed. Invalid server response.");
+        throw new Error(
+          "Sign up succeeded but no session token was returned. Please verify server auth configuration.",
+        );
       }
 
       // Set auth state with user data and real JWT for authenticated API calls

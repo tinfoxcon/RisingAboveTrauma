@@ -1,4 +1,7 @@
-import { extractAuthPayload } from "./apiResponse";
+import {
+  extractAuthPayload,
+  resolveAuthPayloadFromResponse,
+} from "./apiResponse";
 
 describe("extractAuthPayload", () => {
   it("reads the flat mobile auth response shape", () => {
@@ -34,5 +37,30 @@ describe("extractAuthPayload", () => {
         user: { id: 3, email: "missing@example.com" },
       }),
     ).toBeNull();
+  });
+
+  it("falls back to the session token endpoint when the initial payload has only success and user", async () => {
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      text: async () =>
+        JSON.stringify({
+          jwt: "session-jwt",
+          user: { id: 4, onboarded: true },
+        }),
+      headers: { get: () => "application/json" },
+    });
+
+    await expect(
+      resolveAuthPayloadFromResponse(
+        {
+          success: true,
+          user: { id: 4, email: "session@example.com" },
+        },
+        { action: "Sign in" },
+      ),
+    ).resolves.toEqual({
+      jwt: "session-jwt",
+      user: { id: 4, email: "session@example.com", onboarded: true },
+    });
   });
 });

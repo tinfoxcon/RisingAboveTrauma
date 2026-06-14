@@ -5,10 +5,6 @@ import { decodeMobileAuthToken } from "./authJwt";
  * Gets the current session from either:
  * 1. Authorization: Bearer <jwt> header (mobile app) — checked first
  * 2. Cookie-based session (web browser) — fallback
- *
- * For mobile Bearer tokens, we try BOTH salt variants (secure + non-secure)
- * so tokens minted in development still work against a production server and
- * vice-versa (defensive — primary salt is always tried first).
  */
 export async function getSession(request) {
   try {
@@ -32,12 +28,6 @@ export async function getSession(request) {
               };
             }
           }
-
-          // Token present but could not be decoded — log for diagnostics
-          console.error(
-            "getSession: Bearer token decode failed with both salts. " +
-              "Token may be expired, tampered, or signed with a different AUTH_SECRET.",
-          );
         } catch (err) {
           console.error("getSession Bearer decode error:", err?.message || err);
           // fall through to cookie auth
