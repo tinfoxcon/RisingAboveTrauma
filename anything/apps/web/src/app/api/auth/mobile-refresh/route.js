@@ -1,6 +1,9 @@
 import sql from "@/app/api/utils/sql";
 import { getSession } from "@/app/api/utils/getSession";
-import { encodeMobileAuthToken } from "@/app/api/utils/authJwt";
+import {
+  encodeMobileAuthToken,
+  isAuthConfigurationError,
+} from "@/app/api/utils/authJwt";
 
 export async function POST(request) {
   try {
@@ -71,6 +74,12 @@ export async function POST(request) {
     });
   } catch (error) {
     console.error("Mobile refresh error:", error);
-    return Response.json({ error: "Internal server error" }, { status: 500 });
+
+    const status = isAuthConfigurationError(error) ? 503 : 500;
+    const message = isAuthConfigurationError(error)
+      ? "Authentication is temporarily unavailable. Server auth secret is not configured."
+      : "Internal server error";
+
+    return Response.json({ error: message }, { status });
   }
 }

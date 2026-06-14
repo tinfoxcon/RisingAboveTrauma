@@ -92,7 +92,9 @@ export const AuthWebView = ({ mode, proxyURL, baseURL }) => {
       }}
       onShouldStartLoadWithRequest={(request) => {
         if (request.url === `${resolvedBaseUrl}${callbackUrl}`) {
-          fetch(request.url)
+          fetch(request.url, {
+            credentials: "include",
+          })
             .then(async (response) => {
               const data = await readJsonResponse(response, {
                 action: "Auth callback",

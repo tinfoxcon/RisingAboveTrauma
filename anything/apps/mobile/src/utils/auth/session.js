@@ -78,6 +78,7 @@ async function getCurrentAuth() {
 async function requestSessionRefresh(jwt) {
   return fetch(MOBILE_REFRESH_URL, {
     method: "POST",
+    credentials: "include",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${jwt}`,

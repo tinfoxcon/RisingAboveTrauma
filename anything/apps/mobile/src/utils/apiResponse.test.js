@@ -63,4 +63,54 @@ describe("extractAuthPayload", () => {
       user: { id: 4, email: "session@example.com", onboarded: true },
     });
   });
+
+  it("surfaces token exchange errors when the fallback session lookup fails", async () => {
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: false,
+      status: 503,
+      text: async () =>
+        JSON.stringify({
+          error:
+            "Authentication is temporarily unavailable. Server auth secret is not configured.",
+        }),
+      headers: { get: () => "application/json" },
+    });
+
+    await expect(
+      resolveAuthPayloadFromResponse(
+        {
+          success: true,
+          user: { id: 4, email: "session@example.com" },
+        },
+        { action: "Sign in" },
+      ),
+    ).rejects.toThrow(
+      "Authentication is temporarily unavailable. Server auth secret is not configured.",
+    );
+  });
+
+  it("fails loudly when the token exchange response shape is invalid", async () => {
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      text: async () =>
+        JSON.stringify({
+          success: true,
+          user: { id: 4, email: "session@example.com" },
+        }),
+      headers: { get: () => "application/json" },
+    });
+
+    await expect(
+      resolveAuthPayloadFromResponse(
+        {
+          success: true,
+          user: { id: 4, email: "session@example.com" },
+        },
+        { action: "Sign in" },
+      ),
+    ).rejects.toThrow(
+      "Sign in succeeded, but the server returned an invalid session token response.",
+    );
+  });
 });

@@ -97,12 +97,17 @@ export async function resolveAuthPayloadFromResponse(
   });
 
   if (!response.ok) {
+    if (tokenData?.error || tokenData?.message) {
+      throw new Error(tokenData.error || tokenData.message);
+    }
     return null;
   }
 
   const tokenPayload = extractAuthPayload(tokenData);
   if (!tokenPayload) {
-    return null;
+    throw new Error(
+      `${action} succeeded, but the server returned an invalid session token response.`,
+    );
   }
 
   return {
